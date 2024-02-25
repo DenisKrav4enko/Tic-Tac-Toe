@@ -1,6 +1,6 @@
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {selectWinner, selectGameOver, resetGame} from '../../reducers/gameSlice';
+import {selectWinner, selectGameOver, refreshGame} from '../../reducers/gameSlice';
 import './styles.css'
 
 export const StatusBar = props => {
@@ -12,7 +12,7 @@ export const StatusBar = props => {
     useEffect(() => {
         if (gameOver) {
             setTimeout(() => {
-                dispatch(resetGame());
+                dispatch(refreshGame());
             }, 5000);
         }
     }, [gameOver]);
@@ -25,7 +25,7 @@ export const StatusBar = props => {
              status = `You win!`;
             activeClass = 'yellow'
         } else if (winner && winner !== player && winner !== "Draw") {
-             status = `You losT!`;
+             status = `You lost!`;
             activeClass = 'red'
         } else {
             status = winner;

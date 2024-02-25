@@ -7,7 +7,11 @@ export const gameSlice = createSlice({
         matrix: Array(9).fill(null),
         isX: true,
         winner: null,
-        gameOver: false
+        gameOver: false,
+        score: {
+            X: 0,
+            O: 0
+        }
     },
     reducers: {
         updateMatrix: (state, action) => {
@@ -28,21 +32,39 @@ export const gameSlice = createSlice({
         setWinner: (state, action) => {
             state.winner = action.payload;
             state.gameOver = true;
+            const winner = action.payload;
+
+            if (winner === 'X') {
+                state.score = { ...state.score, X: state.score.X + 0.5};
+            } else if (winner === 'O') {
+                state.score = { ...state.score, O: state.score.O + 0.5};
+            }
+        },
+        refreshGame: state => {
+            state.matrix = Array(9).fill(null);
+            state.isX = true;
+            state.winner = null;
+            state.gameOver = false;
         },
         resetGame: state => {
             state.matrix = Array(9).fill(null);
             state.isX = true;
             state.winner = null;
             state.gameOver = false;
+            state.score= {
+                X: 0,
+                O: 0
+            }
         }
     }
 });
 
-export const { updateMatrix, setWinner, resetGame } = gameSlice.actions;
+export const { updateMatrix, setWinner, refreshGame, resetGame } = gameSlice.actions;
 
 export const selectMatrix = state => state.game.matrix;
 export const selectIsX = state => state.game.isX;
 export const selectWinner = state => state.game.winner;
 export const selectGameOver = state => state.game.gameOver;
+export const selectScores = state => state.game.score;
 
 export default gameSlice.reducer;
