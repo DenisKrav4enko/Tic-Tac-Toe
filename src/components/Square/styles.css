@@ -1,0 +1,47 @@
+.square {
+    background-color: #9A8297;
+    margin: 5px;
+    width: calc(100%/3 - 10px);
+    height: calc(100%/3 - 10px);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.square:hover {
+    background-color: #D0782A;
+}
+
+.square.xSymbol:before, .square.xSymbol:after {
+    position: absolute;
+    width: 6px;
+    height: 50px;
+    background-color: white;
+    display: block;
+    content: '';
+    top: 50%;
+    left: 50%;
+    border-radius: 3px;
+}
+
+.square.xSymbol:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.square.xSymbol:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.square.oSymbol:after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: solid 6px white;
+    width: 44px;
+    height: 44px;
+    transform: translate(-50%, -50%);
+}
