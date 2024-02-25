@@ -1,19 +1,28 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.game-board {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 80%;
+}
+
+.player {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.player_first {
+  border-right: 0.15rem solid lightslategray;
 }

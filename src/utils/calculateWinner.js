@@ -1,4 +1,4 @@
-export const calculateWinner = squares => {
+export const calculateWinner = (squares, winner) => {
     const winCombo = [
         [0, 1, 2],
         [3, 4, 5],
@@ -14,7 +14,9 @@ export const calculateWinner = squares => {
         const [a, b, c] = winCombo[i];
 
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-            return squares[a];
+            return winner
+                ? [a, b, c]
+                : squares[a];
         }
     }
 
