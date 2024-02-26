@@ -15,8 +15,9 @@ export const Header = () => {
         <div className="header">
             <img
                 src={logo}
-                alt="logo"/>
+                alt="logo"
                 className="logo"
+            />
             <div className="header__content">
                 <h4>
                     Score: {score.X} : {score.O}
