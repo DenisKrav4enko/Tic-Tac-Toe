@@ -9,7 +9,10 @@ export const Game = ({ player }) => {
 
     return (
         <div className="game">
-            <StatusBar player={player} isActive={isActivePlayer} />
+            <StatusBar
+                player={player}
+                isActive={isActivePlayer}
+            />
             <Matrix player={player} />
         </div>
     )

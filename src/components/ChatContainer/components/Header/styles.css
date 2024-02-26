@@ -1,0 +1,37 @@
+.chat__header {
+    display: flex;
+    position: relative;
+    width: 98%;
+    padding: 0.3rem;
+    height: fit-content;
+}
+
+.name {
+    margin: 0;
+}
+
+.cross-button {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.cross-button:before, .cross-button:after {
+    position: absolute;
+    width: 6px;
+    height: 25px;
+    background-color: white;
+    display: block;
+    content: '';
+    top: 50%;
+    right: 4%;
+    border-radius: 3px;
+}
+
+.cross-button:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cross-button:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

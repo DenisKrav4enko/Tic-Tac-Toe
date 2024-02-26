@@ -1,6 +1,6 @@
 import {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {selectWinner, selectGameOver, refreshGame} from '../../reducers/gameSlice';
+import {selectWinner, selectGameOver, refreshGame} from '../../../../reducers/gameSlice';
 import './styles.css'
 
 export const StatusBar = props => {

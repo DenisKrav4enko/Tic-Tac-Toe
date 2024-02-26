@@ -1,7 +1,7 @@
-import logo from '../../logo.webp';
-import './styles.css'
 import {useDispatch, useSelector} from "react-redux";
 import {resetGame, selectScores} from "../../reducers/gameSlice";
+import logo from '../../logo.webp';
+import './styles.css'
 
 export const Header = () => {
     const dispatch = useDispatch();
@@ -13,10 +13,20 @@ export const Header = () => {
 
     return (
         <div className="header">
-            <img className="logo" src={logo} alt="logo"/>
+            <img
+                src={logo}
+                alt="logo"/>
+                className="logo"
             <div className="header__content">
-                <h4>Score: {score.X} : {score.O}</h4>
-                <button onClick={() => handleOnResetBtnClick()} className="btn">reset</button>
+                <h4>
+                    Score: {score.X} : {score.O}
+                </h4>
+                <button
+                    onClick={() => handleOnResetBtnClick()}
+                    className="btn"
+                >
+                    RESET
+                </button>
             </div>
         </div>
     )

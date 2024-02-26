@@ -22,6 +22,7 @@
 }
 
 .btn {
+    font-weight: bold;
     background-color: #FFD700;
     border-radius: 8px;
     padding: 0.5rem 1rem;

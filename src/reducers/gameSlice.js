@@ -11,7 +11,8 @@ export const gameSlice = createSlice({
         score: {
             X: 0,
             O: 0
-        }
+        },
+        chat: []
     },
     reducers: {
         updateMatrix: (state, action) => {
@@ -54,17 +55,29 @@ export const gameSlice = createSlice({
             state.score= {
                 X: 0,
                 O: 0
-            }
+            },
+            state.chat = []
+        },
+        addChatMessage: (state, action) => {
+            state.chat.push(action.payload);
         }
     }
 });
 
-export const { updateMatrix, setWinner, refreshGame, resetGame } = gameSlice.actions;
+export const {
+    updateMatrix,
+    setWinner,
+    refreshGame,
+    resetGame,
+    addChatMessage,
+    addMessage
+} = gameSlice.actions;
 
 export const selectMatrix = state => state.game.matrix;
 export const selectIsX = state => state.game.isX;
 export const selectWinner = state => state.game.winner;
 export const selectGameOver = state => state.game.gameOver;
 export const selectScores = state => state.game.score;
+export const selectChatMessages = state => state.game.chat;
 
 export default gameSlice.reducer;

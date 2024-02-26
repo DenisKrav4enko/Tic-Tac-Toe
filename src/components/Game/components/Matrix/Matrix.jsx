@@ -1,9 +1,9 @@
-import {useDispatch, useSelector} from 'react-redux';
-import {selectIsX, selectMatrix, selectWinner, setWinner, updateMatrix} from '../../reducers/gameSlice';
-import {calculateWinner} from "../../utils";
-import { Square } from '../Square/Square';
-import './styles.css';
 import {useEffect} from "react";
+import {useDispatch, useSelector} from 'react-redux';
+import {selectIsX, selectMatrix, selectWinner, setWinner, updateMatrix} from '../../../../reducers/gameSlice';
+import {calculateWinner} from "../../../../utils";
+import { Square } from '../../../index';
+import './styles.css';
 
 export const Matrix = ({ player }) => {
     const dispatch = useDispatch();
