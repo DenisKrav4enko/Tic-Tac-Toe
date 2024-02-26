@@ -61,3 +61,12 @@
 .square.winning {
     animation: winningAnimation 5s infinite;
 }
+
+.square.disable {
+    cursor: auto;
+}
+
+.square.disable:hover {
+    cursor: auto;
+    background-color: #9A8297;
+}

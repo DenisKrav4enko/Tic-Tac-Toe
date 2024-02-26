@@ -6,7 +6,7 @@ export const Square = props => {
 
     return (
         <div
-            className={`square ${symbol} ${isWinningSquare ? 'winning' : ''}`}
+            className={`square ${symbol} ${isWinningSquare ? 'winning' : ''} ${isActive ? '' : 'disable'}`}
             onClick={() => isActive && handleOnSquareClick(index)}
         >
         </div>

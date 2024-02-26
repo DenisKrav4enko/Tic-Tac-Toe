@@ -28,7 +28,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 630px) {
     .header {
         width: 98vw;
     }

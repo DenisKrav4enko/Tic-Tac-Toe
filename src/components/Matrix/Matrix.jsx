@@ -13,7 +13,7 @@ export const Matrix = ({ player }) => {
     const isActivePlayer = player === (isX ? 'X' : 'O');
 
     useEffect(() => {
-        (winner === "X" || winner === "O") && // console.log("LOOOOL")
+        (winner === "X" || winner === "O") &&
         dispatch(setWinner(winner))
     }, [winner]);
 

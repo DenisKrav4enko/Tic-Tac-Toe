@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -27,8 +26,9 @@
   border-right: 0.15rem solid lightslategray;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 630px) {
   .App {
+    justify-content: space-around;
     padding: 1rem 0;
   }
 

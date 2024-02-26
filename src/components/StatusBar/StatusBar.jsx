@@ -32,7 +32,7 @@ export const StatusBar = props => {
             activeClass = 'green'
         }
     } else {
-        status = `Next player: ${player}`;
+        status = `Your turn!`;
     }
 
     return (
